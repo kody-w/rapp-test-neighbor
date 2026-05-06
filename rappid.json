@@ -1,0 +1,15 @@
+{
+  "schema": "rapp-rappid/1.1",
+  "rappid": "2ad61460-7050-4c8a-a597-e6697f49b1fb",
+  "kind": "mirror",
+  "name": "rapp-test-neighbor",
+  "display_name": "RAPP Test Neighbor",
+  "github": "https://github.com/kody-w/rapp-test-neighbor",
+  "url": "https://kody-w.github.io/rapp-test-neighbor",
+  "parent_rappid": "0b635450-c042-49fb-b4b1-bdb571044dec",
+  "parent_repo": "https://github.com/kody-w/rapp-installer",
+  "planted_by": "kody-w",
+  "planted_at": "2026-05-06T23:06:51Z",
+  "planted_from": "kody-w/RAPP",
+  "kernel_version": "0.6.0"
+}
