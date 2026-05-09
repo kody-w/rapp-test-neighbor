@@ -1,15 +1,17 @@
 {
-  "schema": "rapp-rappid/1.1",
-  "rappid": "2ad61460-7050-4c8a-a597-e6697f49b1fb",
-  "kind": "mirror",
+  "schema": "rapp-rappid/2.0",
+  "rappid": "rappid:v2:neighborhood:@kody-w/rapp-test-neighbor:f6df0efd02eb7fdba08b58ad3b82466f@github.com/kody-w/rapp-test-neighbor",
+  "kind": "neighborhood",
   "name": "rapp-test-neighbor",
   "display_name": "RAPP Test Neighbor",
   "github": "https://github.com/kody-w/rapp-test-neighbor",
-  "url": "https://kody-w.github.io/rapp-test-neighbor",
-  "parent_rappid": "0b635450-c042-49fb-b4b1-bdb571044dec",
-  "parent_repo": "https://github.com/kody-w/rapp-installer",
+  "url": "https://kody-w.github.io/rapp-test-neighbor/",
+  "parent_rappid": null,
+  "parent_repo": "https://github.com/kody-w/RAPP",
   "planted_by": "kody-w",
-  "planted_at": "2026-05-06T23:06:51Z",
-  "planted_from": "kody-w/RAPP",
-  "kernel_version": "0.6.0"
+  "planted_at": "2026-05-09T22:12:21Z",
+  "kernel_version": "0.6.0",
+  "_planted_by_agent": "backfill_seeds",
+  "_backfilled_at": "2026-05-09T22:12:21Z",
+  "_backfill_reason": "Article XLVI compliance pass"
 }
