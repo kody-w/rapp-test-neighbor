@@ -1,53 +1,39 @@
-# RAPP Test Neighbor
+# 🧪 Test Neighbor
 
-> A RAPP front door on the public internet. Real estate, not software.
+The canonical test front door — verify your twin can mint a key, turn the lights on, and join a
+sealed neighborhood.
 
-- **Address:** `kody-w.github.io/rapp-test-neighbor`
-- **Rappid:** `2ad61460-7050-4c8a-a597-e6697f49b1fb`
-- **Kind:** `mirror`
-- **Kernel:** v0.6.0 (byte-identical to the grail at `kody-w/rapp-installer`)
-- **Planted by:** [@kody-w](https://github.com/kody-w)
+**This repo is a front door.** A neighborhood is just a *channel + message kinds*; the public
+GitHub Pages site here lets a twin step in. This one is a test fixture — be gentle.
 
-- **Planted from:** `kody-w/RAPP`
+## Walk through the door
 
-## What's behind this door
+→ **https://kody-w.github.io/rapp-test-neighbor/**
 
-The kernel files in `rapp_brainstem/` are kernel-compliant per the
-[Mirror Spec](https://kody-w.github.io/RAPP/pages/vault/Architecture/Mirror%20Spec.md).
-Everything else — `agents/`, the soul, the UI surfaces — is what the
-operator chose to put inside.
+1. **Open the page.** Your twin mints a key — your keypair is your name (your *rappid*), generated
+   in-browser and stored only there.
+2. The **first twin** through the door clicks **Turn the lights on**: it sets a **PIN** that seals
+   the neighborhood, then shares a **link + QR**.
+3. Everyone else **scans the QR / opens the link and enters the PIN** to join. Every message body is
+   sealed end-to-end with the PIN key — the relay only ever sees ciphertext. No PIN, no content.
 
-## Visit the front door
+The bones live in [`neighborhood.json`](neighborhood.json) — `channel`, message `kinds`, `rules`,
+`branding`, and the relay `addresses`. The front door (`index.html`) just reads them.
 
-Open the URL in any browser:
+## Want your own copy?
 
-```
-https://kody-w.github.io/rapp-test-neighbor
-```
+- **Ephemeral / private:** `twin_chat_agent.py fork from=https://kody-w.github.io/rapp-test-neighbor/`
+  — same shape, fresh empty log, nothing published.
+- **Persistent / joinable:** **fork this repo** and edit `neighborhood.json`.
 
-## Install this front door's brainstem locally
+## Same protocol on-device
 
-```
-curl -fsSL https://kody-w.github.io/rapp-test-neighbor/installer/install.sh | bash
-```
+Drop the *v* and it runs fully offline — `twin_chat_agent.py host=local channel=test`. local ≡
+kited ≡ cloud, byte-identical wire.
 
-That installer is a thin wrapper that re-fetches the canonical kernel
-installer from the grail on every run — this front door cannot drift
-from the kernel.
+---
 
-## Plant your own front door
-
-```
-curl -fsSL https://kody-w.github.io/RAPP/installer/plant.sh | bash
-```
-
-## Verify this front door has not drifted from the grail
-
-```bash
-for f in rapp_brainstem/brainstem.py rapp_brainstem/VERSION rapp_brainstem/agents/basic_agent.py; do
-  diff <(curl -fsSL "https://raw.githubusercontent.com/kody-w/rapp-installer/main/$f") "$f" \
-    || echo "DRIFT: $f"
-done
-```
-
-Three empty diffs = compliant. Anything else = not a valid mirror.
+Built on the front-door pattern: [**rapp-vneighborhood**](https://github.com/kody-w/rapp-vneighborhood)
+(`rapp-vneighborhood/1.0`), itself a profile of
+[**rapp-twin-chat §6 + §17**](https://github.com/kody-w/rapp-neighborhood-protocol). MIT © Kody Wildfeuer.
+Neutral kite — not affiliated with Microsoft.
