@@ -1,6 +1,6 @@
 {
   "schema": "rapp-facets/1.0",
-  "rappid": "rappid:v2:neighborhood:@kody-w/rapp-test-neighbor:f6df0efd02eb7fdba08b58ad3b82466f@github.com/kody-w/rapp-test-neighbor",
+  "rappid": "rappid:@kody-w/rapp-test-neighbor:f6df0efd02eb7fdba08b58ad3b82466f",
   "facets": {},
   "_note": "Declare published capabilities here over time. See specs/SPEC.md \u00a73."
 }
