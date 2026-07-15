@@ -52,7 +52,7 @@
     "quality_tier": "community",
     "license": "PolyForm-Small-Business",
     "kind": "neighborhood",
-    "rappid": "rappid:@kody-w/rapp-test-neighbor:f6df0efd02eb7fdba08b58ad3b82466f",
+    "rappid": "rappid:@kody-w/rapp-test-neighbor:60aabdbd667e17ef1a6e924f69e06d6e421407242958116a8e6159c174fbd23d",
     "gate_url": "https://kody-w.github.io/rapp-test-neighbor/",
     "summon_url": "https://kody-w.github.io/RAPPcards/#summon&seed=15665432106518357242",
     "_compliance": "rappcards/1.1.2 \u2014 kody-w/RAPPcards/SPEC.md"
